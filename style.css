@@ -17,6 +17,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'DM Sans', sans-serif;
 }
@@ -51,6 +55,7 @@ header {
     /* opacity: 0.9; */
     top: 0;
     z-index: 1;
+    transition: 0.3s;
 }
 
 nav {
@@ -71,7 +76,7 @@ nav ul li a {
     font-size: 1.125rem;
     font-weight: 700;
     color: var(--brand-green);
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.4rem;
 }
 
 nav ul li a:hover {
@@ -356,4 +361,35 @@ nav button:hover {
 footer {
     background-color: var(--brand-green);
     padding: 5rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-text img {
+    width: 16rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-text p:nth-child(2) {
+    margin-bottom: 1rem;
+}
+
+.footer-text p {
+    font-size: 0.875rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+.social {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social img {
+    width: 1.5rem;
+    height: 1.5rem;
 }

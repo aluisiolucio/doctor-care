@@ -176,9 +176,103 @@
     </main>
 
     <footer>
-        <div class="container">
-            footer
+        <div class="container footer-content">
+            <div class="footer-text">
+                <a href="#">
+                    <img src="public/assets/logo-alt.svg" alt="Doctor Care">
+                </a>
+                <p>&copy;2024 - DoctorCare.</p>
+                <p>Todos os direitos reservados.</p>
+            </div>
+            <div class="social">
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="public/assets/instagram.svg" alt="Icone de instagram">
+                </a>
+                <a href="https://www.facebook.com/?locale=pt_BR" target="_blank">
+                    <img src="public/assets/facebook.svg" alt="Icone de facebook">
+                </a>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <img src="public/assets/youtube.svg" alt="Icone do youtube">
+                </a>
+            </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('scroll', () => {
+            let header = document.querySelector('header');
+            let logo = document.querySelector('.logo');
+            let button = document.querySelector('nav button');
+            let a = document.querySelectorAll('nav ul li a');
+
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = '#00856F';
+                logo.src = 'public/assets/logo-alt.svg';
+
+                button.style.backgroundColor = '#00856F';
+                button.style.color = '#fff';
+                button.style.border = '1px solid #fff';
+
+                a.forEach((element) => {
+                    element.style.color = '#F7F9F9';
+
+                    element.onmouseover = function() {
+                        this.style.color = '#F7F9F9';
+                        this.style.borderBottom = '2px solid #F7F9F9';
+                    };
+                    
+                    element.onmouseout = function() {
+                        this.style.color = '#F7F9F9';
+                        this.style.borderBottom = 'none';
+                    };
+                });
+
+                button.onmouseover = function() {
+                    this.style.backgroundColor = '#00453A';
+                    this.style.color = '#fff';
+                    this.style.border = '1px solid #00453A';
+                };
+
+                button.onmouseout = function() {
+                    this.style.backgroundColor = '#00856F';
+                    this.style.color = '#fff';
+                    this.style.border = '1px solid #fff';
+                };
+            } else {
+                header.style.backgroundColor = '#DCE9E2';
+                logo.src = 'public/assets/logo.svg';
+
+                button.style.backgroundColor = '#DCE9E2';
+                button.style.color = '#00856F';
+                button.style.border = '1px solid #00856F';
+
+                a.forEach((element) => {
+                    element.style.color = '#00856F';
+
+                    element.onmouseover = function() {
+                        this.style.color = '#00453A';
+                        this.style.borderBottom = '2px solid #00453A';
+                    };
+
+                    element.onmouseout = function() {
+                        this.style.color = '#00856F';
+                        this.style.borderBottom = 'none';
+                    };
+                });
+
+                button.onmouseover = function() {
+                    this.style.backgroundColor = '#00856F';
+                    this.style.color = '#fff';
+                    this.style.border = '1px solid #00856F';
+                };
+
+                button.onmouseout = function() {
+                    this.style.backgroundColor = '#DCE9E2';
+                    this.style.color = '#00856F';
+                    this.style.border = '1px solid #00856F';
+                };
+            }
+        })
+    </script>
 </body>
 </html>
